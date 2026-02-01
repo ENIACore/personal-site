@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.skillblock-circular-gradient {
+  background: radial-gradient(circle, theme('colors.neon-green') 0%, theme('colors.electric-blue') 25%, theme('colors.neon-green') 50%, theme('colors.electric-blue') 75%, theme('colors.neon-green') 100%);
+  background-size: 400% 400%;
+  animation: skillblock-gradient-animation 15s ease infinite;
+}
+
+@keyframes skillblock-gradient-animation {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes fall-and-fade {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(var(--fall-distance, 30vh)) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes reset-fall-and-fade {
+    from {
+        transform: translateY(var(--fall-distance, 30vh));
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+.falling-letter {
+    position: absolute;
+    animation: fall-and-fade 5s ease-out infinite, reset-fall-and-fade 0s 5s infinite;
+}
