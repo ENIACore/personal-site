@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
     <html lang="en" className={`${crimsonPro.variable}`}>
-        <body className="relative bg-neutral-100">
+        <body className="relative bg-background-subtle">
             <BackgroundGradient classes='' opacity={.04}/> 
             {children}
         </body>

@@ -1,304 +1,223 @@
 @import "tailwindcss";
 
-/* ============================================
-   MODERN MINIMAL - Color Palette
-   ============================================
-   A clean, contemporary palette with soft muted 
-   tones designed for paper-textured backgrounds.
-   ============================================ */
-
+/* Modern Minimal - Clean contemporary palette with soft muted paper texture */ 
 @theme {
-  /* Primary - Soft Navy (primary buttons, links, key highlights) */
-  --color-primary-50: #f4f7f9;
-  --color-primary-100: #e8eef3;
-  --color-primary-200: #c9d8e4;
-  --color-primary-300: #a3bccf;
-  --color-primary-400: #7096b3;
-  --color-primary-500: #3d5a73;
-  --color-primary-600: #344d63;
-  --color-primary-700: #2b4052;
-  --color-primary-800: #233442;
-  --color-primary-900: #1c2a36;
-  --color-primary-950: #111b23;
+    /* Primary - Soft Navy (primary buttons, links, key highlights) */
+    --color-primary-50: #f4f7f9;
+    --color-primary-100: #e8eef3;
+    --color-primary-200: #c9d8e4;
+    --color-primary-300: #a3bccf;
+    --color-primary-400: #7096b3;
+    --color-primary-500: #3d5a73;
+    --color-primary-600: #344d63;
+    --color-primary-700: #2b4052;
+    --color-primary-800: #233442;
+    --color-primary-900: #1c2a36;
+    --color-primary-950: #111b23;
 
-  /* --------------------------------------------
-     Secondary - Terracotta
-     Used for: secondary buttons, tags, badges, hover states
-     -------------------------------------------- */
-  --color-secondary-50: #fdf6f3;
-  --color-secondary-100: #fbeae4;
-  --color-secondary-200: #f6d3c7;
-  --color-secondary-300: #efb5a0;
-  --color-secondary-400: #e4917a;
-  --color-secondary-500: #c4785a;
-  --color-secondary-600: #b0614a;
-  --color-secondary-700: #934e3d;
-  --color-secondary-800: #794236;
-  --color-secondary-900: #653a30;
-  --color-secondary-950: #361c17;
+    /* Secondary - Terracotta (secondary buttons, tags, badges, hover states) */
+    --color-secondary-50: #fdf6f3;
+    --color-secondary-100: #fbeae4;
+    --color-secondary-200: #f6d3c7;
+    --color-secondary-300: #efb5a0;
+    --color-secondary-400: #e4917a;
+    --color-secondary-500: #c4785a;
+    --color-secondary-600: #b0614a;
+    --color-secondary-700: #934e3d;
+    --color-secondary-800: #794236;
+    --color-secondary-900: #653a30;
+    --color-secondary-950: #361c17;
 
-  /* --------------------------------------------
-     Accent - Sage
-     Used for: success states, emphasis, icons, small highlights
-     -------------------------------------------- */
-  --color-accent-50: #f4f7f5;
-  --color-accent-100: #e6ede9;
-  --color-accent-200: #cddbd3;
-  --color-accent-300: #a9c2b3;
-  --color-accent-400: #7d9082;
-  --color-accent-500: #637a6a;
-  --color-accent-600: #4e6255;
-  --color-accent-700: #405046;
-  --color-accent-800: #36423b;
-  --color-accent-900: #2e3832;
-  --color-accent-950: #181f1b;
+    /* Accent - Sage (success states, emphasis, icons, small highlights) */
+    --color-accent-50: #f4f7f5;
+    --color-accent-100: #e6ede9;
+    --color-accent-200: #cddbd3;
+    --color-accent-300: #a9c2b3;
+    --color-accent-400: #7d9082;
+    --color-accent-500: #637a6a;
+    --color-accent-600: #4e6255;
+    --color-accent-700: #405046;
+    --color-accent-800: #36423b;
+    --color-accent-900: #2e3832;
+    --color-accent-950: #181f1b;
 
-  /* --------------------------------------------
-     Neutral - Warm tones for text, borders, backgrounds
-     -------------------------------------------- */
-  --color-neutral-50: #fdfcfa;
-  --color-neutral-100: #f9f7f4;
-  --color-neutral-200: #f4f2ee;
-  --color-neutral-300: #e8e5df;
-  --color-neutral-400: #d1ccc3;
-  --color-neutral-500: #a8a095;
-  --color-neutral-600: #857d72;
-  --color-neutral-700: #6b645b;
-  --color-neutral-800: #4a453f;
-  --color-neutral-900: #2c2825;
-  --color-neutral-950: #1a1816;
+    /* Neutral - Warm tones (text, borders, backgrounds */
+    --color-neutral-50: #fdfcfa;
+    --color-neutral-100: #f9f7f4;
+    --color-neutral-200: #f4f2ee;
+    --color-neutral-300: #e8e5df;
+    --color-neutral-400: #d1ccc3;
+    --color-neutral-500: #a8a095;
+    --color-neutral-600: #857d72;
+    --color-neutral-700: #6b645b;
+    --color-neutral-800: #4a453f;
+    --color-neutral-900: #2c2825;
+    --color-neutral-950: #1a1816;
 
-  /* --------------------------------------------
-     Typography
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
-     -------------------------------------------- */
-  --font-serif: "Crimson Pro", ui-serif, Georgia, serif;
-
-  /* --------------------------------------------
-     Border Radius
-     -------------------------------------------- */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
-  --radius-full: 9999px;
-
-  /* --------------------------------------------
-     Shadows
-     -------------------------------------------- */
-  --shadow-sm: 0 1px 2px 0 rgb(44 40 37 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(44 40 37 / 0.08), 0 2px 4px -2px rgb(44 40 37 / 0.05);
-  --shadow-lg: 0 10px 15px -3px rgb(44 40 37 / 0.08), 0 4px 6px -4px rgb(44 40 37 / 0.05);
-  --shadow-xl: 0 20px 25px -5px rgb(44 40 37 / 0.1), 0 8px 10px -6px rgb(44 40 37 / 0.05);
+    /* Typography */
+    --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Crimson Pro", ui-serif, Georgia, serif;
 }
-
-/* ============================================
-   Semantic Color Tokens (CSS Variables)
-   These change based on light/dark mode
-   ============================================ */
 
 @layer base {
-  :root {
-    /* Background */
-    --background: var(--color-neutral-50);
-    --background-subtle: var(--color-neutral-100);
-    --background-muted: var(--color-neutral-200);
-    
-    /* Foreground / Text */
-    --foreground: var(--color-neutral-900);
-    --foreground-muted: var(--color-neutral-500);
-    --foreground-subtle: var(--color-neutral-600);
-    
-    /* Card */
-    --card: var(--color-neutral-50);
-    --card-foreground: var(--color-neutral-900);
-    
-    /* Primary */
-    --primary: var(--color-primary-500);
-    --primary-hover: var(--color-primary-600);
-    --primary-foreground: var(--color-neutral-50);
-    
-    /* Secondary */
-    --secondary: var(--color-secondary-500);
-    --secondary-hover: var(--color-secondary-600);
-    --secondary-foreground: var(--color-neutral-50);
-    
-    /* Accent */
-    --accent: var(--color-accent-400);
-    --accent-hover: var(--color-accent-500);
-    --accent-foreground: var(--color-neutral-50);
-    
-    /* Muted */
-    --muted: var(--color-neutral-200);
-    --muted-foreground: var(--color-neutral-500);
-    
-    /* Border */
-    --border: var(--color-neutral-300);
-    --border-subtle: var(--color-neutral-200);
-    
-    /* Input */
-    --input: var(--color-neutral-200);
-    --input-focus: var(--color-primary-500);
-    
-    /* Ring (focus states) */
-    --ring: var(--color-primary-500);
-    
-    /* Destructive / Error */
-    --destructive: #dc2626;
-    --destructive-foreground: var(--color-neutral-50);
-    
-    /* Success */
-    --success: var(--color-accent-500);
-    --success-foreground: var(--color-neutral-50);
-  }
-
-  /* ============================================
-     Dark Theme
-     ============================================ */
-  .dark {
-    /* Background */
-    --background: var(--color-neutral-950);
-    --background-subtle: var(--color-neutral-900);
-    --background-muted: var(--color-neutral-800);
-    
-    /* Foreground / Text */
-    --foreground: var(--color-neutral-100);
-    --foreground-muted: var(--color-neutral-400);
-    --foreground-subtle: var(--color-neutral-500);
-    
-    /* Card */
-    --card: var(--color-neutral-900);
-    --card-foreground: var(--color-neutral-100);
-    
-    /* Primary */
-    --primary: var(--color-primary-400);
-    --primary-hover: var(--color-primary-300);
-    --primary-foreground: var(--color-neutral-950);
-    
-    /* Secondary */
-    --secondary: var(--color-secondary-400);
-    --secondary-hover: var(--color-secondary-300);
-    --secondary-foreground: var(--color-neutral-950);
-    
-    /* Accent */
-    --accent: var(--color-accent-400);
-    --accent-hover: var(--color-accent-300);
-    --accent-foreground: var(--color-neutral-950);
-    
-    /* Muted */
-    --muted: var(--color-neutral-800);
-    --muted-foreground: var(--color-neutral-400);
-    
-    /* Border */
-    --border: var(--color-neutral-700);
-    --border-subtle: var(--color-neutral-800);
-    
-    /* Input */
-    --input: var(--color-neutral-800);
-    --input-focus: var(--color-primary-400);
-    
-    /* Ring (focus states) */
-    --ring: var(--color-primary-400);
-    
-    /* Destructive / Error */
-    --destructive: #f87171;
-    --destructive-foreground: var(--color-neutral-950);
-    
-    /* Success */
-    --success: var(--color-accent-400);
-    --success-foreground: var(--color-neutral-950);
-  }
-
-  /* ============================================
-     Base Styles
-     ============================================ */
-  *,
-  *::before,
-  *::after {
-    border-color: var(--border);
-  }
-
-  html {
-    font-family: var(--font-serif);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
-    line-height: 1.6;
-  }
-
-  /* Smooth theme transitions */
-  html.transitioning,
-  html.transitioning *,
-  html.transitioning *::before,
-  html.transitioning *::after {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
-  }
+    :root {
+        /* Background */
+        --background: var(--color-neutral-300);
+        --background-subtle: var(--color-neutral-100);
+        /* --background-muted: var(); */
+        
+        /* Foreground & Text */
+        /* --foreground: var(); */
+        /* --foreground-muted: var(); */
+        /* --foreground-subtle: var(); */
+        
+        /* Card */
+        /* --card-background: var(); */
+        /* --card-foreground: var(); */
+        
+        /* Primary */
+        /* --primary: var(); */
+        /* --primary-hover: var(); */
+        /* --primary-foreground: var(); */
+        
+        /* Secondary */
+        /* --secondary: var(); */
+        /* --secondary-hover: var(); */
+        /* --secondary-foreground: var(); */
+        
+        /* Accent */
+        /* --accent: var(); */
+        /* --accent-hover: var(); */
+        /* --accent-foreground: var(); */
+        
+        /* Muted */
+        /* --muted: var(); */
+        /* --muted-foreground: var(); */
+        
+        /* Border */
+        /* --border: var(); */
+        /* --border-subtle: var(); */
+        
+        /* Input */
+        /* --input: var(); */
+        /* --input-focus: var(); */
+        
+        /* Ring (focus states) */
+        /* --ring: var(); */
+        
+        /* Destructive / Error */
+        /* --destructive: var(); */
+        /* --destructive-foreground: var(); */
+        
+        /* Success */
+        /* --success: var(); */
+        /* --success-foreground: var(); */
+    }
+    .dark * {
+        /* Background */
+        /* --background: var(); */
+        /* --background-subtle: var(); */
+        /* --background-muted: var(); */
+        
+        /* Foreground & Text */
+        /* --foreground: var(); */
+        /* --foreground-muted: var(); */
+        /* --foreground-subtle: var(); */
+        
+        /* Card */
+        /* --card-background: var(); */
+        /* --card-foreground: var(); */
+        
+        /* Primary */
+        /* --primary: var(); */
+        /* --primary-hover: var(); */
+        /* --primary-foreground: var(); */
+        
+        /* Secondary */
+        /* --secondary: var(); */
+        /* --secondary-hover: var(); */
+        /* --secondary-foreground: var(); */
+        
+        /* Accent */
+        /* --accent: var(); */
+        /* --accent-hover: var(); */
+        /* --accent-foreground: var(); */
+        
+        /* Muted */
+        /* --muted: var(); */
+        /* --muted-foreground: var(); */
+        
+        /* Border */
+        /* --border: var(); */
+        /* --border-subtle: var(); */
+        
+        /* Input */
+        /* --input: var(); */
+        /* --input-focus: var(); */
+        
+        /* Ring (focus states) */
+        /* --ring: var(); */
+        
+        /* Destructive / Error */
+        /* --destructive: var(); */
+        /* --destructive-foreground: var(); */
+        
+        /* Success */
+        /* --success: var(); */
+        /* --success-foreground: var(); */
+    }
 }
 
-/* ============================================
-   Utility Classes for Semantic Colors
-   ============================================ */
-
-@layer utilities {
-  /* Background utilities */
-  .bg-background { background-color: var(--background); }
-  .bg-background-subtle { background-color: var(--background-subtle); }
-  .bg-background-muted { background-color: var(--background-muted); }
-  .bg-card { background-color: var(--card); }
-  .bg-muted { background-color: var(--muted); }
-  .bg-primary { background-color: var(--primary); }
-  .bg-primary-hover { background-color: var(--primary-hover); }
-  .bg-secondary { background-color: var(--secondary); }
-  .bg-secondary-hover { background-color: var(--secondary-hover); }
-  .bg-accent { background-color: var(--accent); }
-  .bg-accent-hover { background-color: var(--accent-hover); }
-  .bg-destructive { background-color: var(--destructive); }
-  .bg-success { background-color: var(--success); }
-
-  /* Text utilities */
-  .text-foreground { color: var(--foreground); }
-  .text-foreground-muted { color: var(--foreground-muted); }
-  .text-foreground-subtle { color: var(--foreground-subtle); }
-  .text-card-foreground { color: var(--card-foreground); }
-  .text-muted-foreground { color: var(--muted-foreground); }
-  .text-primary { color: var(--primary); }
-  .text-primary-foreground { color: var(--primary-foreground); }
-  .text-secondary { color: var(--secondary); }
-  .text-secondary-foreground { color: var(--secondary-foreground); }
-  .text-accent { color: var(--accent); }
-  .text-accent-foreground { color: var(--accent-foreground); }
-  .text-destructive { color: var(--destructive); }
-  .text-destructive-foreground { color: var(--destructive-foreground); }
-  .text-success { color: var(--success); }
-  .text-success-foreground { color: var(--success-foreground); }
-
-  /* Border utilities */
-  .border-border { border-color: var(--border); }
-  .border-border-subtle { border-color: var(--border-subtle); }
-  .border-input { border-color: var(--input); }
-  .border-primary { border-color: var(--primary); }
-  .border-secondary { border-color: var(--secondary); }
-  .border-accent { border-color: var(--accent); }
-  .border-destructive { border-color: var(--destructive); }
-
-  /* Ring utilities */
-  .ring-ring { --tw-ring-color: var(--ring); }
-  .ring-primary { --tw-ring-color: var(--primary); }
-  .ring-secondary { --tw-ring-color: var(--secondary); }
-  .ring-accent { --tw-ring-color: var(--accent); }
-  .ring-destructive { --tw-ring-color: var(--destructive); }
-
-  /* Focus visible outline */
-  .focus-ring {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-  .focus-ring:focus-visible {
-    outline: 2px solid var(--ring);
-  }
+@theme inline {
+    /* Background */
+    --color-background: var(--background);
+    --color-background-subtle: var(--background-subtle);
+    /* --color-background-muted: var(); */
+    
+    /* Foreground & Text */
+    /* --color-foreground: var(); */
+    /* --color-foreground-muted: var(); */
+    /* --color-foreground-subtle: var(); */
+    
+    /* Card */
+    /* --color-card-background: var(); */
+    /* --color-card-foreground: var(); */
+    
+    /* Primary */
+    /* --color-primary: var(); */
+    /* --color-primary-hover: var(); */
+    /* --color-primary-foreground: var(); */
+    
+    /* Secondary */
+    /* --color-secondary: var(); */
+    /* --color-secondary-hover: var(); */
+    /* --color-secondary-foreground: var(); */
+    
+    /* Accent */
+    /* --color-accent: var(); */
+    /* --color-accent-hover: var(); */
+    /* --color-accent-foreground: var(); */
+    
+    /* Muted */
+    /* --color-muted: var(); */
+    /* --color-muted-foreground: var(); */
+    
+    /* Border */
+    /* --color-border: var(); */
+    /* --color-border-subtle: var(); */
+    
+    /* Input */
+    /* --color-input: var(); */
+    /* --color-input-focus: var(); */
+    
+    /* Ring (focus states) */
+    /* --color-ring: var(); */
+    
+    /* Destructive / Error */
+    /* --color-destructive: var(); */
+    /* --color-destructive-foreground: var(); */
+    
+    /* Success */
+    /* --color-success: var(); */
+    /* --color-success-foreground: var(); */
 }
