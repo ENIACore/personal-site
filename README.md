@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+  layout/ - Structural components that define page/section organization
+  - Examples: Section, SectionWrapper
+  - These handle the overall layout structure of your pages
+
+  shared/ - App-specific reusable components used across multiple pages
+  - Examples: Navbar, Gradient
+  - These are components specific to your app that get reused in multiple places
+
+  ui/ - Generic, reusable UI primitives and interactive widgets
+  - Currently empty in your project
+  - Best for components like buttons, tooltips, inputs, cards, etc.

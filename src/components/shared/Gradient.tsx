@@ -4,7 +4,7 @@ import React from 'react';
 const Gradient: React.FC = () => {
     return (
         <div
-            className="absolute inset-0 opacity-[0.01] pointer-events-none"
+            className="fixed inset-0 opacity-[0.03] pointer-events-none"
             style={{
                 backgroundImage: "url('bg-gradient.png')",
                 backgroundSize: '161px',

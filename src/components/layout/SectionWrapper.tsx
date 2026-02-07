@@ -10,8 +10,7 @@ interface SectionWrapperProps {
 // Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
 const SectionWrapper: React.FC<SectionWrapperProps> = ({children}) => {
     return (
-        <div className="flex flex-col  items-center bg-neutral-100">
-        <Gradient/>
+        <div className="flex flex-col items-center">
         {children}
         </div>
     );
