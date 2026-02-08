@@ -1,23 +1,7 @@
 import type { Metadata } from "next";
+import { spectral } from '../lib/fonts.ts';
 import "./globals.css";
-import localFont from "next/font/local";
 import BackgroundGradient from "../components/ui/BackgroundGradient";
-
-const crimsonPro = localFont({
-    src: [
-    {
-        path: '../../public/fonts/crimson-pro/CrimsonPro-VariableFont_wght.ttf',
-        style: 'normal',
-    },
-    {
-        path: '../../public/fonts/crimson-pro/CrimsonPro-Italic-VariableFont_wght.ttf',
-        style: 'italic',
-    },
-    ],
-    variable: '--font-crimson-pro',
-    display: 'swap',
-});
-
 
 export const metadata: Metadata = {
   title: "Chase's Server",
@@ -26,7 +10,7 @@ export const metadata: Metadata = {
 //style="background-image: url('/bg-gradient.png'); background-size: 161px; background-repeat: repeat;"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-    <html lang="en" className={`${crimsonPro.variable} bg-background-subtle`}>
+    <html lang="en" className={`${spectral.variable} bg-background-subtle`}>
         <body className="relative bg-background-subtle min-h-screen">
             <BackgroundGradient classes='' opacity={.06}/> 
             {children}

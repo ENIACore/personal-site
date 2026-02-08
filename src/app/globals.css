@@ -71,11 +71,15 @@
     --color-neutral-950: #1a1816;
 
     /* Typography */
-    --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-serif: "Crimson Pro", ui-serif, Georgia, serif;
+    /* --font-mono: "Courier Prime", "ui-monospace", "monospace"; */
+    --font-spectral: "Spectral", "serif";
 }
 
 @layer base {
+    html, body {
+        font-family: var(--font-spectral);
+    }
+
     :root {
         /* Background */
         --background: var(--color-neutral-300);
