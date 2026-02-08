@@ -15,7 +15,7 @@ const IntroSectionContent: React.FC = () => {
             <div className="flex flex-col">
                 <div className="flex flex-row justify-center mt-2">
                     <Image
-                        src="/chase-lamkin-pfp.jpeg"
+                        src="/images/profile/chase-lamkin-pfp.jpeg"
                         alt="Chase Lamkin profile picture"
                         height={150}
                         width={150}

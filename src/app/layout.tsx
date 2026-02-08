@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Chase's Server",
   description: "Chase's homelab server for all projects",
 };
-//style="background-image: url('/bg-gradient.png'); background-size: 161px; background-repeat: repeat;"
+//style="background-image: url('/images/backgrounds/bg-gradient.png'); background-size: 161px; background-repeat: repeat;"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
     <html lang="en" className={`${spectral.variable} bg-background-subtle`}>

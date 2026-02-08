@@ -12,7 +12,7 @@ const BackgroundGradient: React.FC<BackgroundGradientProps> = ({opacity, classes
             className={`${classes} absolute inset-0 pointer-events-none`}
             style={{
                 opacity: opacity,
-                backgroundImage: "url('bg-gradient.png')",
+                backgroundImage: "url('/images/backgrounds/bg-gradient.png')",
                 backgroundSize: '161px',
                 backgroundRepeat: 'repeat'
             }}

@@ -15,7 +15,7 @@ const AboutSectionContent: React.FC = () => {
                 </div>
                 <div className="flex flex-row w-full items-center justify-around my-4">
                     <Image
-                        src="/about-icons/software-eng-icon.png"
+                        src="/images/icons/software-eng-icon.png"
                         alt="Software Engineer Icon"
                         height={100}
                         width={100}
@@ -23,7 +23,7 @@ const AboutSectionContent: React.FC = () => {
                         unoptimized
                     />
                     <Image
-                        src="/about-icons/army-icon.png"
+                        src="/images/icons/army-icon.png"
                         alt="Software Engineer Icon"
                         height={100}
                         width={100}
@@ -31,7 +31,7 @@ const AboutSectionContent: React.FC = () => {
                         unoptimized
                     />
                     <Image
-                        src="/about-icons/lifter-icon.png"
+                        src="/images/icons/lifter-icon.png"
                         alt="Software Engineer Icon"
                         height={100}
                         width={100}
