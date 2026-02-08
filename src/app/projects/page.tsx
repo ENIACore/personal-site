@@ -5,6 +5,7 @@ import Navbar from '../../components/shared/Navbar';
 import Footer from '@/src/components/shared/Footer';
 import IntroSectionContent from './_components/IntroSectionContent';
 import ProjectPreview from './_components/ProjectPreview';
+import PreviewWrapper from './_components/PreviewWrapper';
 
 const ProjectsPage: React.FC = () => {
     return (
@@ -16,11 +17,15 @@ const ProjectsPage: React.FC = () => {
                         <IntroSectionContent/>
                     </Section>
                     <Section>
-                        <ProjectPreview/>
+                        <PreviewWrapper>
+                            <ProjectPreview/>
+                            <ProjectPreview/>
+                            <ProjectPreview/>
+                        </PreviewWrapper>
                     </Section>
                 </SectionWrapper>
             </main>
-            {/*<Footer/>*/}
+            <Footer/>
         </>
     );
 }

@@ -87,15 +87,18 @@
     :root {
         /* Background */
         --background: var(--color-neutral-300);
-        --background-subtle: var(--color-neutral-100);
+        --background-primary: var(--color-primary-700);
         --background-secondary: var(--color-secondary-300);
-        --background-emphasis: var(--color-neutral-700);
-        /* --background-muted: var(); */
+        --background-emphasis: var(--color-neutral-700); /* opposite of primary background */
+        --background-muted: var(--color-primary-300);
+        --background-subtle: var(--color-neutral-100);
         
         /* Foreground & Text */
         --foreground: var(--color-primary-900);
-        --foreground-muted: var(--color-primary-400);
+        /* --foreground-primary: var(); */
         --foreground-secondary: var(--color-secondary-900);
+        --foreground-neutral: var(--color-neutral-300); /* works with emphasis background */
+        --foreground-muted: var(--color-primary-400);
         /* --foreground-subtle: var(); */
         
         /* Card */
@@ -145,15 +148,18 @@
     .dark * {
         /* Background */
         /* --background: var(); */
-        /* --background-subtle: var(); */
+        /* --background-primary: var(); */
         /* --background-secondary: var(); */
-        /* --background-emphasis: var(); */
+        /* --background-emphasis: var(); */ /* opposite of primary background */
         /* --background-muted: var(); */
+        /* --background-subtle: var(); */
         
         /* Foreground & Text */
         /* --foreground: var(); */
-        /* --foreground-muted: var(); */
+        /* --foreground-primary: var(); */
         /* --foreground-secondary: var(); */
+        /* --foreground-neutral: var(); */ /* works with emphasis background */
+        /* --foreground-muted: var(); */
         /* --foreground-subtle: var(); */
         
         /* Card */
@@ -206,15 +212,18 @@
 @theme inline {
     /* Background */
     --color-background: var(--background);
-    --color-background-subtle: var(--background-subtle);
+    --color-background-primary: var(--background-primary);
     --color-background-secondary: var(--background-secondary);
     --color-background-emphasis: var(--background-emphasis);
-    /* --color-background-muted: var(); */
-    
+    --color-background-muted: var(--background-muted);
+    --color-background-subtle: var(--background-subtle);
+
     /* Foreground & Text */
     --color-foreground: var(--foreground);
-    --color-foreground-muted: var(--foreground-muted);
+    /* --color-foreground-primary: var(); */
     --color-foreground-secondary: var(--foreground-secondary);
+    --color-foreground-neutral: var(--foreground-neutral);
+    --color-foreground-muted: var(--foreground-muted);
     /* --color-foreground-subtle: var(); */
     
     /* Card */
