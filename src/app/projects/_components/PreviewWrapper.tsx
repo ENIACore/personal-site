@@ -5,10 +5,11 @@ interface PreviewWrapperProps {
     children: React.ReactNode;
 }
 
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const PreviewWrapper: React.FC<PreviewWrapperProps> = ({children}) => {
     return (
         <div className='flex flex-col'>
-            <SectionTitle classes='' title='Projects'/>
+            <SectionTitle title='Projects'/>
             {children}
         </div>
     );

@@ -35,7 +35,36 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Code Style Guide
 
+### Tailwind CSS Class Ordering
+
+All className attributes should follow this order for consistency and readability:
+
+1. **Layout** - position, display, float, clear, isolation, z-index
+2. **Flexbox/Grid** - flex, grid, justify, align, gap, place, order
+3. **Spacing** - margin (m-*), padding (p-*)
+4. **Sizing** - width, height, max-width, min-width, etc.
+5. **Typography** - font-family, font-size, font-weight, line-height, text-align, text-color, text-decoration
+6. **Visual** - background, border, border-radius, box-shadow
+7. **Effects** - opacity, transform, transition, animation
+8. **Miscellaneous** - cursor, pointer-events, overflow, select, appearance
+9. **State Variants** - hover:, focus:, active:, disabled:, group-hover:
+10. **Responsive Variants** - sm:, md:, lg:, xl:, 2xl:
+
+**Standard Comment (add to all component files):**
+```tsx
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+```
+
+**Example:**
+```tsx
+<div className="relative flex justify-center items-center p-4 w-full h-20 text-lg font-bold text-white bg-blue-500 rounded-lg shadow-md transition-all duration-300 hover:bg-blue-600 md:w-1/2">
+  Content
+</div>
+```
+
+## Component Organization
 
   layout/ - Structural components that define page/section organization
   - Examples: Section, SectionWrapper

@@ -3,16 +3,16 @@ import Link from 'next/link';
 
 interface TextLinkProps {
     text: string
-    classes: string
+    className?: string
     link: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const TextLink: React.FC<TextLinkProps> = ({text, classes, link}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const TextLink: React.FC<TextLinkProps> = ({text, className, link}) => {
     return (
         <Link
             href={link}
-            className={`${classes} cursor-pointer text-base xs:text-sm font-normal text-foreground hover:text-foreground-muted`}
+            className={`${className} text-base font-normal text-foreground cursor-pointer hover:text-foreground-muted xs:text-sm`}
         >
         {text}
         </Link>

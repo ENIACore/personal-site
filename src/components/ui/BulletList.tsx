@@ -2,13 +2,13 @@ import React from 'react';
 
 interface BulletListProps {
     items: string[]
-    classes?: string
+    className?: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const BulletList: React.FC<BulletListProps> = ({items, classes = ''}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const BulletList: React.FC<BulletListProps> = ({items, className = ''}) => {
     return (
-        <ul className={`${classes} list-retro list-inside text-base xs:text-sm font-normal text-foreground`}>
+        <ul className={`${className} text-base font-normal text-foreground list-retro list-inside xs:text-sm`}>
             {items.map((item, index) => (
                 <li key={index}>
                     {item}

@@ -2,31 +2,22 @@ import React from 'react';
 import TextLink from '../ui/TextLink';
 import BackgroundGradient from '../ui/BackgroundGradient';
 import SubText from '../ui/SubText';
+import { NAVIGATION_ITEMS } from '@/src/constants/navigation';
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
         <div className="z-50 flex flex-col items-center">
-        <footer className="relative w-4/5 md:w-3/4 lg:w-2/3 max-w-150 rounded-t-lg border-t-2 border-l-2 border-r-2 border-border-subtle bg-background py-6 px-12">
-            <BackgroundGradient classes='' opacity={.06}/>
+        <footer className="relative py-6 px-12 w-4/5 max-w-150 bg-background border-t-2 border-l-2 border-r-2 border-border-subtle rounded-t-lg md:w-3/4 lg:w-2/3">
+            <BackgroundGradient className="rounded-t-lg" opacity={.06}/>
             <ul className="flex flex-row flex-wrap justify-between w-full py-2">
-                <li className="group relative px-1">
-                    <TextLink classes="" text="Home" link="/"/>
-                </li>
-                <li className="group relative px-1">
-                    <TextLink classes="" text="Experience" link="/experience"/>
-                </li>
-                <li className="group relative px-1">
-                    <TextLink classes="" text="Projects" link="/projects"/>
-                </li>
-                <li className="group relative px-1">
-                    <TextLink classes="" text="Blogs" link="/blogs"/>
-                </li>
-                <li className="group relative px-1">
-                    <TextLink classes="" text="Contact" link="/contact"/>
-                </li>
+                {NAVIGATION_ITEMS.map((item) => (
+                    <li key={item.path} className="group relative px-1">
+                        <TextLink text={item.label} link={item.path}/>
+                    </li>
+                ))}
             </ul>
 
             {/* Divider line - half width */}
@@ -35,8 +26,8 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex flex-row justify-between text-sm py-2">
-                <SubText classes="cursor-default" text={`© ${currentYear} Chase Lamkin`}/>
-                <SubText classes="cursor-default" text="Made with ☕ ☕ ☕"/>
+                <SubText className="cursor-default" text={`© ${currentYear} Chase Lamkin`}/>
+                <SubText className="cursor-default" text="Made with ☕ ☕ ☕"/>
             </div>
         </footer>
         </div>

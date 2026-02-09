@@ -2,13 +2,13 @@ import React from 'react';
 
 interface ParagraphProps {
     text: string
-    classes: string
+    className?: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const Paragraph: React.FC<ParagraphProps> = ({text, classes}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const Paragraph: React.FC<ParagraphProps> = ({text, className}) => {
     return (
-        <p className={`${classes} text-base xs:text-sm font-normal text-foreground`}>
+        <p className={`${className} text-base font-normal text-foreground xs:text-sm`}>
         {text}
         </p>
     );

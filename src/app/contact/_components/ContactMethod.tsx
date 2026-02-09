@@ -9,18 +9,18 @@ interface ContactMethodProps {
     social: string
     link: string
     tag: string
-    classes: string
+    className?: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const ContactMethod: React.FC<ContactMethodProps> = ({icon, social, link, tag, classes}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const ContactMethod: React.FC<ContactMethodProps> = ({icon, social, link, tag, className}) => {
 
     return (
-        <div className={`${classes} flex flex-col`}>
-            <SubSectionTitle classes="font-semibold text-center" title={social}/>
+        <div className={`${className} flex flex-col`}>
+            <SubSectionTitle className="font-semibold text-center" title={social}/>
             <div className="flex flex-row">
                 <Link href={link} aria-label={`link to ${social}`}>{icon}</Link>
-                <TextLink classes='ml-4 text-foreground-muted' link={link} text={tag}/>
+                <TextLink className='ml-4 text-foreground-muted' link={link} text={tag}/>
             </div>
         </div>
     );
@@ -32,6 +32,6 @@ export default ContactMethod;
 
 
 /*
-                <SubSectionTitle classes="font-semibold" title="Email"/>
+                <SubSectionTitle className="font-semibold" title="Email"/>
                 <TextLink text=''/>
 */

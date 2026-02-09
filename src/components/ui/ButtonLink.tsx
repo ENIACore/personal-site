@@ -5,19 +5,19 @@ import BackgroundGradient from './BackgroundGradient';
 interface ButtonLinkProps {
     text: string
     link: string
-    linkClasses: string
-    buttonClasses: string
+    className?: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const ButtonLink: React.FC<ButtonLinkProps> = ({text, link, linkClasses, buttonClasses}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const ButtonLink: React.FC<ButtonLinkProps> = ({text, link, className}) => {
     return (
-        <button className={`${buttonClasses} relative text-base xs:text-sm font-semibold text-foreground-neutral pt-1 px-2 rounded-lg cursor-pointer bg-background-primary hover:bg-background-muted transition-colors duration-300`}>
-            <BackgroundGradient classes='' opacity={.06}/>
-            <Link href={link} className={`${linkClasses}`}>
-                {text}
-            </Link>
-        </button>
+        <Link
+            href={link}
+            className={`${className} relative inline-block pt-1 px-2 text-base font-semibold text-foreground-neutral bg-background-primary rounded-lg transition-colors duration-300 cursor-pointer hover:bg-background-muted xs:text-sm`}
+        >
+            <BackgroundGradient className="rounded-lg" opacity={.06}/>
+            {text}
+        </Link>
     );
 };
 export default ButtonLink;

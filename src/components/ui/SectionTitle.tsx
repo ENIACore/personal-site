@@ -2,13 +2,13 @@ import React from 'react';
 
 interface SectionTitleProps {
     title: string
-    classes: string
+    className?: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const SectionTitle: React.FC<SectionTitleProps> = ({title, classes}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const SectionTitle: React.FC<SectionTitleProps> = ({title, className}) => {
     return (
-        <h2 className={`text-2xl font-bold text-foreground-secondary my-4 ${classes}`}>
+        <h2 className={`my-4 text-2xl font-bold text-foreground-secondary ${className}`}>
             {title}
         </h2>
     );

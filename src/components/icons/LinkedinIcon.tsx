@@ -1,5 +1,5 @@
 import React from 'react';
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const LinkedinIcon: React.FC = () => {
     return (
         <svg 

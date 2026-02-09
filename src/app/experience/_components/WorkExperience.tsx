@@ -15,7 +15,7 @@ interface WorkExperienceProps {
     accomplishments: string[];
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const WorkExperience: React.FC<WorkExperienceProps> = ({
     companyLogo,
     companyName,
@@ -34,19 +34,19 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
                 height={56}
                 className={`${logoClasses} absolute top-0 right-0 h-14 md:h-18.75 w-auto`}
             />
-            <SectionTitle classes="max-w-3/4 !my-0" title={companyName}/>
-            <SubSectionTitle classes='' title={jobTitle}/>
+            <SectionTitle className="max-w-3/4 !my-0" title={companyName}/>
+            <SubSectionTitle title={jobTitle}/>
             <h4 className="text-base font-medium text-foreground-muted">
                 {dateRange}
             </h4>
             <div>
                 {technologies.map((tech, index) => (
-                    <Badge key={index} classes="my-2 mr-2" text={tech}/>
+                    <Badge key={index} className="my-2 mr-2" text={tech}/>
                 ))}
             </div>
             <BulletList
                 items={accomplishments}
-                classes="text-sm leading-loose"
+                className="text-sm leading-loose"
             />
         </div>
     );

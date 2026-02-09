@@ -15,10 +15,11 @@ interface BlogPreviewProps {
     readMoreLink?: string;
 }
 
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const BlogPreview: React.FC<BlogPreviewProps> = ({title, description, thumbnail, date, tags, readMoreLink = '#'}) => {
     return (
         <div className='flex flex-col'>
-            <SectionTitle classes='' title={title}/>
+            <SectionTitle title={title}/>
             <div className="flex flex-col sm:flex-row items-center">
                 <div className="w-50 h-50 shrink-0">
                     <Image
@@ -31,8 +32,8 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({title, description, thumbnail,
                     />
                 </div>
                 <div className="flex flex-col">
-                    <Paragraph classes='mt-4 sm:m-6 text-center sm:text-start' text={description}/>
-                    <ButtonLink text='View Blog' link={readMoreLink} buttonClasses='self-center my-4 xs:text-lg !text-2xl' linkClasses=''/>
+                    <Paragraph className='mt-4 text-center sm:m-6 sm:text-start' text={description}/>
+                    <ButtonLink text='View Blog' link={readMoreLink} className='self-center my-4 !text-2xl xs:text-lg'/>
                 </div>
             </div>
         </div>

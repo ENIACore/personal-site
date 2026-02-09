@@ -1,14 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import TwitterIcon from '@/src/components/ui/TwitterIcon';
-import LinkedinIcon from '@/src/components/ui/LinkedinIcon';
-import GithubIcon from '@/src/components/ui/GithubIcon';
-import EmailIcon from '@/src/components/ui/EmailIcon';
 import Paragraph from '@/src/components/ui/Paragraph';
 import SubText from '@/src/components/ui/SubText';
+import SocialLinks from '@/src/components/shared/SocialLinks';
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const IntroSectionContent: React.FC = () => {
     return (
         <>
@@ -24,27 +20,14 @@ const IntroSectionContent: React.FC = () => {
                     />
                 </div>
                 <div className="flex flex-row justify-center">
-                    <SubText classes="italic" text="@ENIACore"/>
+                    <SubText className="italic" text="@ENIACore"/>
                 </div>
                 <div className="flex flex-row justify-center">
                     <h1 className="text-3xl font-bold text-foreground">Chase Lamkin</h1>
                 </div>
-                <div className="flex flex-row justify-center">
-                    <Link href="https://www.linkedin.com/in/chaselamkin/" className="m-2 cursor-pointer">
-                        <LinkedinIcon/>
-                    </Link>
-                    <Link href="https://github.com/ENIACore" className="m-2 cursor-pointer">
-                        <GithubIcon/>
-                    </Link>
-                    <Link href="https://x.com/ENIACore" className="m-2 cursor-pointer">
-                        <TwitterIcon/>
-                    </Link>
-                    <Link href="mailto:contact@lamkin.dev" className="m-2 cursor-pointer">
-                        <EmailIcon/>
-                    </Link>
-                </div>
+                <SocialLinks />
                 <div className="flex flex-row justify-center mt-2 mb-2">
-                <Paragraph classes="text-center" text="Hi, I'm Chase! I'm a software engineer with ~3 YOE and a love for building things. I built this site to share my passion projects and opinions on the industry."/>
+                <Paragraph className="text-center" text="Hi, I'm Chase! I'm a software engineer with ~3 YOE and a love for building things. I built this site to share my passion projects and opinions on the industry."/>
                 </div>
             </div>
         </>

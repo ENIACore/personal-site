@@ -2,13 +2,13 @@ import React from 'react';
 
 interface SubTextProps {
     text: string
-    classes: string
+    className?: string
 }
 
-// Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
-const SubText: React.FC<SubTextProps> = ({text, classes}) => {
+// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
+const SubText: React.FC<SubTextProps> = ({text, className}) => {
     return (
-        <span className={`${classes} text-xs font-light text-foreground-muted`}>
+        <span className={`${className} text-xs font-light text-foreground-muted`}>
         {text}
         </span>
     );
