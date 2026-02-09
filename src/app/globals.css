@@ -145,21 +145,23 @@
         /* --success: var(); */
         /* --success-foreground: var(); */
     }
-    .dark * {
+
+
+    .dark {
         /* Background */
-        /* --background: var(); */
-        /* --background-primary: var(); */
-        /* --background-secondary: var(); */
-        /* --background-emphasis: var(); */ /* opposite of primary background */
-        /* --background-muted: var(); */
-        /* --background-subtle: var(); */
+        --background: var(--color-neutral-950);
+        --background-primary: var(--color-primary-500);
+        --background-secondary: var(--color-secondary-700);
+        --background-emphasis: var(--color-neutral-500); /* opposite of primary background */ /*TODO*/
+        --background-muted: var(--color-primary-800); 
+        --background-subtle: var(--color-neutral-800);
         
         /* Foreground & Text */
-        /* --foreground: var(); */
+        --foreground: var(--color-neutral-500);
         /* --foreground-primary: var(); */
-        /* --foreground-secondary: var(); */
-        /* --foreground-neutral: var(); */ /* works with emphasis background */
-        /* --foreground-muted: var(); */
+        --foreground-secondary: var(--color-secondary-300);
+        --foreground-neutral: var(--color-neutral-900); /* works with emphasis background */
+        --foreground-muted: var(--color-primary-300);
         /* --foreground-subtle: var(); */
         
         /* Card */
@@ -174,10 +176,9 @@
         /* Secondary */
         /* --secondary: var(); */
         /* --secondary-hover: var(); */
-        /* --secondary-foreground: var(); */
 
         /* Badges & Icons */
-        /* --badge: var(); */
+        --badge: var(--color-secondary-400);
         
         /* Accent */
         /* --accent: var(); */
@@ -189,8 +190,8 @@
         /* --muted-foreground: var(); */
         
         /* Border */
-        /* --border: var(); */
-        /* --border-subtle: var(); */
+        --border: var(--color-primary-500);
+        --border-subtle: var(--color-primary-700);
         
         /* Input */
         /* --input: var(); */

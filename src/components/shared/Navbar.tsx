@@ -7,7 +7,7 @@ import BackgroundGradient from '../ui/BackgroundGradient';
 // Tailwind order: position & layout -> alignment → sizing -> spacing -> visuals -> effects
 const Navbar: React.FC = () => {
     return (
-        <header className="sticky top-0 z-50 flex flex-col items-center">
+        <header className="sticky top-0 z-40 flex flex-col items-center">
         <nav className="relative w-4/5 md:w-3/4 lg:w-2/3 max-w-150 rounded-b-lg border-b-2 border-l-2 border-r-2 border-border-subtle bg-background px-4">
             <BackgroundGradient classes='' opacity={.06}/>
             <ul className="flex flex-row justify-around max-w-100 mt-4 mb-4 mx-auto">

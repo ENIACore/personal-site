@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { spectral } from '../lib/fonts.ts';
 import "./globals.css";
 import BackgroundGradient from "../components/ui/BackgroundGradient";
+import ThemeToggle from "../components/ui/ThemeToggle.tsx";
 
 export const metadata: Metadata = {
   title: "Chase's Server",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
     <html lang="en" className={`${spectral.variable} bg-background-subtle`}>
         <body className="relative bg-background-subtle min-h-screen">
+            <ThemeToggle/>
             <BackgroundGradient classes='' opacity={.06}/>
             {children}
         </body>
