@@ -6,7 +6,7 @@ import Paragraph from '@/src/components/ui/Paragraph';
 import ButtonLink from '@/src/components/ui/ButtonLink';
 
 
-interface BlogPreviewProps {
+interface PreviewProps {
     title: string;
     description: string;
     thumbnail: string;
@@ -16,7 +16,7 @@ interface BlogPreviewProps {
 }
 
 // Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const BlogPreview: React.FC<BlogPreviewProps> = ({title, description, thumbnail, date, tags, readMoreLink = '#'}) => {
+const Preview: React.FC<BlogPreviewProps> = ({title, description, thumbnail, date, tags, readMoreLink = '#'}) => {
     return (
         <div className='flex flex-col'>
             <SectionTitle title={title}/>
@@ -33,11 +33,11 @@ const BlogPreview: React.FC<BlogPreviewProps> = ({title, description, thumbnail,
                 </div>
                 <div className="flex flex-col">
                     <Paragraph className='mt-4 text-center sm:m-6 sm:text-start' text={description}/>
-                    <ButtonLink text='View Blog' link={readMoreLink} className='self-center my-4 !text-2xl xs:text-lg'/>
+                    <ButtonLink text='View Blog' link={readMoreLink} className='self-center my-4 text-2xl! xs:text-lg'/>
                 </div>
             </div>
         </div>
     );
 };
 
-export default BlogPreview;
+export default Preview;

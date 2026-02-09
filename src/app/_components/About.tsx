@@ -3,8 +3,7 @@ import SectionTitle from '@/src/components/ui/SectionTitle';
 import Image from 'next/image';
 import React from 'react';
 
-// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const AboutSectionContent: React.FC = () => {
+const About: React.FC = () => {
     return (
         <div className="flex flex-col">
             <SectionTitle title='About Me'/>
@@ -41,4 +40,4 @@ const AboutSectionContent: React.FC = () => {
     );
 };
 
-export default AboutSectionContent;
+export default About;

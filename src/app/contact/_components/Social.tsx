@@ -4,7 +4,7 @@ import SubSectionTitle from '@/src/components/ui/SubSectionTitle';
 import TextLink from '@/src/components/ui/TextLink';
 
 
-interface ContactMethodProps {
+interface SocialProps {
     icon: React.ReactNode
     social: string
     link: string
@@ -12,8 +12,7 @@ interface ContactMethodProps {
     className?: string
 }
 
-// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const ContactMethod: React.FC<ContactMethodProps> = ({icon, social, link, tag, className}) => {
+const Social: React.FC<SocialProps> = ({icon, social, link, tag, className}) => {
 
     return (
         <div className={`${className} flex flex-col`}>
@@ -26,12 +25,4 @@ const ContactMethod: React.FC<ContactMethodProps> = ({icon, social, link, tag, c
     );
 };
 
-export default ContactMethod;
-
-
-
-
-/*
-                <SubSectionTitle className="font-semibold" title="Email"/>
-                <TextLink text=''/>
-*/
+export default Social;

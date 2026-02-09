@@ -5,7 +5,7 @@ import Badge from '@/src/components/ui/Badge';
 import BackgroundGradient from '@/src/components/ui/BackgroundGradient';
 import ButtonLink from '@/src/components/ui/ButtonLink';
 
-interface ProjectPreviewProps {
+interface PreviewProps {
     thumbnail: string;
     projectName: string;
     description: string;
@@ -14,7 +14,7 @@ interface ProjectPreviewProps {
     viewMoreLink: string;
 }
 
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({
+const Preview: React.FC<PreviewProps> = ({
     thumbnail,
     projectName,
     description,
@@ -25,18 +25,18 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
     return (
         <div className="group relative flex flex-col my-2 rounded-lg sm:flex-row sm:h-37.5">
             <BackgroundGradient className="rounded-lg" opacity={.06}/>
-            <ProjectPreviewThumbnail thumbnail={thumbnail} projectName={projectName} />
-            <ProjectPreviewContent
+            <Thumbnail thumbnail={thumbnail} projectName={projectName} />
+            <Content
                 projectName={projectName}
                 description={description}
                 technologies={technologies}
             />
-            <ProjectPreviewButtons githubLink={githubLink} viewMoreLink={viewMoreLink} />
+            <Actions githubLink={githubLink} viewMoreLink={viewMoreLink} />
         </div>
     );
 };
 
-const ProjectPreviewThumbnail: React.FC<{ thumbnail: string; projectName: string }> = ({ thumbnail, projectName }) => {
+const Thumbnail: React.FC<{ thumbnail: string; projectName: string }> = ({ thumbnail, projectName }) => {
     return (
         <div className="flex flex-row justify-center pt-4 w-full bg-background-emphasis rounded-t-lg sm:w-37.5 sm:h-37.5 sm:shrink-0 sm:rounded-t-none sm:rounded-l-lg sm:pt-0 sm:block">
             <div className="shrink-0 w-50 h-50 rounded-l-lg overflow-hidden sm:w-full sm:h-full">
@@ -52,7 +52,7 @@ const ProjectPreviewThumbnail: React.FC<{ thumbnail: string; projectName: string
     );
 };
 
-const ProjectPreviewContent: React.FC<{ projectName: string; description: string; technologies: string[] }> = ({
+const Content: React.FC<{ projectName: string; description: string; technologies: string[] }> = ({
     projectName,
     description,
     technologies
@@ -77,22 +77,22 @@ const ProjectPreviewContent: React.FC<{ projectName: string; description: string
     );
 };
 
-const ProjectPreviewButtons: React.FC<{ githubLink: string; viewMoreLink: string }> = ({ githubLink, viewMoreLink }) => {
+const Actions: React.FC<{ githubLink: string; viewMoreLink: string }> = ({ githubLink, viewMoreLink }) => {
     return (
         <>
             {/* Small screen: static buttons below content */}
             <div className="flex flex-row flex-wrap px-2 pb-2 pt-0 bg-background-emphasis rounded-b-lg sm:px-4 sm:hidden">
-                <ButtonLink className='z-10 mr-2 mb-2 !text-2xl xs:text-lg' text='Github' link={githubLink}/>
-                <ButtonLink className='z-10 mb-2 !text-2xl xs:text-lg' text='View More' link={viewMoreLink}/>
+                <ButtonLink className='z-10 mr-2 mb-2 text-2xl! xs:text-lg' text='Github' link={githubLink}/>
+                <ButtonLink className='z-10 mb-2 text-2xl! xs:text-lg' text='View More' link={viewMoreLink}/>
             </div>
             {/* Large screen: hover overlay */}
             <div className="absolute inset-0 hidden items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:flex">
                 <div className="absolute inset-0 bg-neutral-300 opacity-25" />
-                <ButtonLink className='z-10 mr-4 !text-2xl xs:text-lg' text='Github' link={githubLink}/>
-                <ButtonLink className='z-10 !text-2xl xs:text-lg' text='View More' link={viewMoreLink}/>
+                <ButtonLink className='z-10 mr-4 text-2xl! xs:text-lg' text='Github' link={githubLink}/>
+                <ButtonLink className='z-10 text-2xl! xs:text-lg' text='View More' link={viewMoreLink}/>
             </div>
         </>
     );
 };
 
-export default ProjectPreview;
+export default Preview;

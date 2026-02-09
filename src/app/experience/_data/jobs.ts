@@ -1,4 +1,4 @@
-export interface WorkExperienceData {
+export interface Job {
     companyLogo: string;
     companyName: string;
     logoClasses: string;
@@ -8,7 +8,7 @@ export interface WorkExperienceData {
     accomplishments: string[];
 }
 
-export const workExperiences: WorkExperienceData[] = [
+export const jobs: Job[] = [
     {
         companyLogo: "/images/logos/IBM-logo.png",
         companyName: "IBM",

@@ -15,8 +15,7 @@ interface WorkExperienceProps {
     accomplishments: string[];
 }
 
-// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const WorkExperience: React.FC<WorkExperienceProps> = ({
+const Job: React.FC<WorkExperienceProps> = ({
     companyLogo,
     companyName,
     logoClasses,
@@ -34,7 +33,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
                 height={56}
                 className={`${logoClasses} absolute top-0 right-0 h-14 md:h-18.75 w-auto`}
             />
-            <SectionTitle className="max-w-3/4 !my-0" title={companyName}/>
+            <SectionTitle className="max-w-3/4 my-0!" title={companyName}/>
             <SubSectionTitle title={jobTitle}/>
             <h4 className="text-base font-medium text-foreground-muted">
                 {dateRange}
@@ -52,5 +51,4 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
     );
 };
 
-export default WorkExperience;
-
+export default Job;

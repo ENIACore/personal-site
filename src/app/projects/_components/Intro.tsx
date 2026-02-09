@@ -1,8 +1,8 @@
 import Paragraph from '@/src/components/ui/Paragraph';
 import SectionTitle from '@/src/components/ui/SectionTitle';
 import React from 'react';
-// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const IntroSectionContent: React.FC = () => {
+
+const Intro: React.FC = () => {
     return (
         <div className="flex flex-col">
             <SectionTitle title='My Projects'/>
@@ -11,4 +11,4 @@ const IntroSectionContent: React.FC = () => {
     );
 };
 
-export default IntroSectionContent;
+export default Intro;

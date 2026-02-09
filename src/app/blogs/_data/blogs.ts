@@ -1,4 +1,4 @@
-export interface BlogData {
+export interface Blog {
     thumbnail: string;
     title: string;
     description: string;
@@ -7,7 +7,7 @@ export interface BlogData {
     readMoreLink: string;
 }
 
-export const blogs: BlogData[] = [
+export const blogs: Blog[] = [
     {
         thumbnail: "/images/blog-thumbnails/todo-blog-thumbnail.png",
         title: "Blog 1",

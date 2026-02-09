@@ -1,23 +1,26 @@
 import React from 'react';
 import SectionWrapper from '../../components/layout/SectionWrapper';
 import Section from '../../components/layout/Section';
-import IntroSectionContent from './_components/IntroSectionContent';
-import BlogPreview from './_components/BlogPreview';
-import { blogs } from './_data/blogData';
+import Intro from './_components/Intro';
+import Preview from './_components/Preview';
+import { blogs } from './_data/blogs';
 
 // Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const BlogsPage: React.FC = () => {
     return (
-        <main className="py-8">
+        <main className="mt-auto">
             <SectionWrapper>
+
                 <Section>
-                    <IntroSectionContent/>
+                    <Intro/>
                 </Section>
+
                 {blogs.map((blog, index) => (
-                    <Section key={index}>
-                        <BlogPreview {...blog} />
-                    </Section>
+                <Section key={index}>
+                    <Preview {...blog} />
+                </Section>
                 ))}
+
             </SectionWrapper>
         </main>
     );

@@ -3,8 +3,7 @@ import SectionTitle from '@/src/components/ui/SectionTitle';
 import { Route } from 'lucide-react';
 import React from 'react';
 
-// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const ExperienceSectionContent: React.FC = () => {
+const Intro: React.FC = () => {
     return (
         <div className="flex flex-col">
             <div className="flex flex-row justify-between items-center">
@@ -17,4 +16,4 @@ const ExperienceSectionContent: React.FC = () => {
     );
 };
 
-export default ExperienceSectionContent;
+export default Intro;
