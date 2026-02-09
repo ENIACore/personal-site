@@ -13,7 +13,7 @@ export const projects: ProjectData[] = [
         projectName: "Media Library Manager",
         description: "Automatically renames and organizes large media libraries (e.g., Plex, Jellyfin)",
         technologies: ["Go", "Bash"],
-        githubLink: "https://github.com/ENIACore/media_library_manager",
+        githubLink: "https://github.com/ENIACore/media-library-manager",
         viewMoreLink: "#"
     },
     {
@@ -34,10 +34,10 @@ export const projects: ProjectData[] = [
     },
     {
         thumbnail: "/images/project-thumbnails/nexus-site-thumbnail.png",
-        projectName: "Nexus Website",
+        projectName: "Person Website",
         description: "Personal portfolio site showcasing projects and blog posts. Open source and available for others to use with attribution.",
         technologies: ["TypeScript", "Next.js", "Tailwind CSS"],
-        githubLink: "https://github.com/ENIACore/nexus_site",
+        githubLink: "https://github.com/ENIACore/personal-site",
         viewMoreLink: "#"
     },
 ];
