@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div className="z-50 flex flex-col items-center">
+        <div className="z-50 flex flex-col items-center mt-4">
         <footer className="relative py-6 px-12 w-4/5 max-w-150 bg-background border-t-2 border-l-2 border-r-2 border-border-subtle rounded-t-lg md:w-3/4 lg:w-2/3">
             <BackgroundGradient className="rounded-t-lg" opacity={.06}/>
             <ul className="flex flex-row flex-wrap justify-between w-full py-2">

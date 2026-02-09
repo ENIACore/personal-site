@@ -9,23 +9,21 @@ import { projects } from './_data/projectData';
 // Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const ProjectsPage: React.FC = () => {
     return (
-        <main className="py-8">
-            <SectionWrapper>
+        <SectionWrapper>
 
-                <Section>
-                    <Intro/>
-                </Section>
+            <Section>
+                <Intro/>
+            </Section>
 
-                <Section>
-                    <PreviewList>
-                    {projects.map((project, index) => (
-                        <Preview key={index} {...project} />
-                    ))}
-                    </PreviewList>
-                </Section>
+            <Section>
+                <PreviewList>
+                {projects.map((project, index) => (
+                    <Preview key={index} {...project} />
+                ))}
+                </PreviewList>
+            </Section>
 
-            </SectionWrapper>
-        </main>
+        </SectionWrapper>
     );
 }
 

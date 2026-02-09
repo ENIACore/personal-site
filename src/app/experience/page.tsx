@@ -8,21 +8,19 @@ import { jobs } from './_data/jobs';
 // Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const ExperiencePage: React.FC = () => {
     return (
-        <main className="py-8">
-            <SectionWrapper>
+        <SectionWrapper>
 
-                <Section>
-                    <Intro/>
-                </Section>
+            <Section>
+                <Intro/>
+            </Section>
 
-                {jobs.map((job, index) => (
-                <Section key={index}>
-                    <Job {...job} />
-                </Section>
-                ))}
+            {jobs.map((job, index) => (
+            <Section key={index}>
+                <Job {...job} />
+            </Section>
+            ))}
 
-            </SectionWrapper>
-        </main>
+        </SectionWrapper>
     );
 }
 

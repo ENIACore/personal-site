@@ -25,9 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Navbar/>
 
             {/* body (container fills height if minimal content) */}
-            <div className="flex flex-col flex-1">
+            <main className="flex flex-col flex-1">
+                <div className="my-auto">
                 {children}
-            </div>
+                </div>
+            </main>
 
             {/* footer */}
             <Footer/>
@@ -35,3 +37,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
     );
 }
+// <main className="my-auto">

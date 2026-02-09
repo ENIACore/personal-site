@@ -7,21 +7,17 @@ import About from './_components/About';
 // Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const Page: React.FC = () => {
     return (
-        <main className="py-8">
+        <SectionWrapper>
 
-            <SectionWrapper>
+            <Section>
+                <Intro/>
+            </Section>
 
-                <Section>
-                    <Intro/>
-                </Section>
+            <Section>
+                <About/>
+            </Section>
 
-                <Section>
-                    <About/>
-                </Section>
-
-            </SectionWrapper>
-
-        </main>
+        </SectionWrapper>
     );
 }
 

@@ -5,15 +5,13 @@ import Contact from './_components/Contact';
 
 const ContactPage: React.FC = () => {
     return (
-        <main className="my-auto">
-            <SectionWrapper>
+        <SectionWrapper>
 
-                <Section>
-                    <Contact/>
-                </Section>
+            <Section>
+                <Contact/>
+            </Section>
 
-            </SectionWrapper>
-        </main>
+        </SectionWrapper>
     );
 }
 

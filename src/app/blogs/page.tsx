@@ -8,21 +8,19 @@ import { blogs } from './_data/blogs';
 // Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
 const BlogsPage: React.FC = () => {
     return (
-        <main className="mt-auto">
-            <SectionWrapper>
+        <SectionWrapper>
 
-                <Section>
-                    <Intro/>
-                </Section>
+            <Section>
+                <Intro/>
+            </Section>
 
-                {blogs.map((blog, index) => (
-                <Section key={index}>
-                    <Preview {...blog} />
-                </Section>
-                ))}
+            {blogs.map((blog, index) => (
+            <Section key={index}>
+                <Preview {...blog} />
+            </Section>
+            ))}
 
-            </SectionWrapper>
-        </main>
+        </SectionWrapper>
     );
 }
 
