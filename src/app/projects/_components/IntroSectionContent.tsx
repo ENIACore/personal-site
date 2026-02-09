@@ -6,7 +6,7 @@ const IntroSectionContent: React.FC = () => {
     return (
         <div className="flex flex-col">
             <SectionTitle classes="" title='My Projects'/>
-            <Paragraph classes="" text="Below you'll find a collection of projects I've built and am proud to share. They're all free to use, and some include links to comprehensive documentation (such as go docs) that I host on this domain."/>
+            <Paragraph classes="" text="Below is a collection of projects I've built and am proud to share. They're all open source and free to use, with some including links to comprehensive documentation (such as Go docs) hosted on this domain."/>
         </div>
     );
 };

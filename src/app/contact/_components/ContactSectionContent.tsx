@@ -18,7 +18,7 @@ const ContactSectionContent: React.FC = () => {
             <SectionTitle classes="text-center !my-4" title="Contact Me"/>
             <Paragraph
                 classes="text-center max-w-lg my-4"
-                text="I'm always open to discussing new opportunities, collaborations, or just having a chat about technology and software engineering."
+                text="I'm always open to discussing new opportunities, collaborations, or simply having a coffee chat."
             />
 
             <div className="flex flex-col items-center">
@@ -29,7 +29,7 @@ const ContactSectionContent: React.FC = () => {
 
             <Paragraph
                 classes="text-center max-w-md italic !my-4"
-                text="I am most active on Email and typically respond within 24-48 hours ☺"
+                text="I'm most active on email and typically respond within 24-48 hours. Looking forward to connecting!"
             />
         </div>
     );

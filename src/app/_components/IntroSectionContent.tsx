@@ -44,7 +44,7 @@ const IntroSectionContent: React.FC = () => {
                     </Link>
                 </div>
                 <div className="flex flex-row justify-center mt-2 mb-2">
-                <Paragraph classes="text-center" text="Hi, I'm Chase. I'm a Software Engineer with ~3 YOE & a passion for creating things. I built this site to share my passion projects & opinions on the industry."/>
+                <Paragraph classes="text-center" text="Hi, I'm Chase! I'm a software engineer with ~3 YOE and a love for building things. I built this site to share my passion projects and opinions on the industry."/>
                 </div>
             </div>
         </>

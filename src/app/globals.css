@@ -81,7 +81,7 @@
     }
     
     .list-retro li::marker {
-        content: "⊹ ";
+        content: "○ ";
     }
 
     :root {

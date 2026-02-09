@@ -11,7 +11,7 @@ export const projects: ProjectData[] = [
     {
         thumbnail: "/images/project-thumbnails/media-library-manager-thumbnail.png",
         projectName: "Media Library Manager",
-        description: "Automatically renames and reorganizes large media libraries I.e plex, jellyfin, etc)",
+        description: "Automatically renames and organizes large media libraries (e.g., Plex, Jellyfin)",
         technologies: ["Go", "Bash"],
         githubLink: "https://github.com/ENIACore/media_library_manager",
         viewMoreLink: "#"
@@ -19,15 +19,15 @@ export const projects: ProjectData[] = [
     {
         thumbnail: "/images/project-thumbnails/nexus-server-thumbnail.png",
         projectName: "Nexus Server",
-        description: "\'Nexus\' Server bootstrap which bootstraps a server setup. Even used to boostrap the server this site is hosted on ☺.",
-        technologies: ["Python","Bash", "Docker"],
+        description: "Server bootstrap automation that configures complete server environments. Used to bootstrap the server hosting this site.",
+        technologies: ["Python", "Bash", "Docker"],
         githubLink: "https://github.com/ENIACore/nexus",
         viewMoreLink: "#"
     },
     {
         thumbnail: "/images/project-thumbnails/neovim-bootstrap-thumnail.png",
         projectName: "Neovim Bootstrap",
-        description: "Project that automatically bootstraps my personal neovim configuration to your system",
+        description: "Automatically installs and configures my personal Neovim setup on any system",
         technologies: ["Lua", "Bash"],
         githubLink: "https://github.com/ENIACore/eniacore.nvim",
         viewMoreLink: "#"
@@ -35,8 +35,8 @@ export const projects: ProjectData[] = [
     {
         thumbnail: "/images/project-thumbnails/nexus-site-thumbnail.png",
         projectName: "Nexus Website",
-        description: "\'Nexus\' Site, (current site) to display about me, projects, and blogs. Available for use by others if credit is given.",
-        technologies: ["typescript","NextJS", "tailwindcss"],
+        description: "Personal portfolio site showcasing projects and blog posts. Open source and available for others to use with attribution.",
+        technologies: ["TypeScript", "Next.js", "Tailwind CSS"],
         githubLink: "https://github.com/ENIACore/nexus_site",
         viewMoreLink: "#"
     },

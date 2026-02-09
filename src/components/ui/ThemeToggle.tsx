@@ -24,9 +24,9 @@ function ThemeToggle() {
             className="fixed top-3.5 left-1 sm:top-3.5 sm:left-3.5 lg:top-10 lg:left-10 cursor-pointer z-50"
         >
             {isDark ? (
-                <Moon className="w-7 h-7 sm:w-10 sm:h-10 text-foreground hover:text-foreground-muted" />
-            ) : (
                 <Sun className="w-7 h-7 sm:w-10 sm:h-10 text-foreground hover:text-foreground-muted" />
+            ) : (
+                <Moon className="w-7 h-7 sm:w-10 sm:h-10 text-foreground hover:text-foreground-muted" />
             )}
         </button>
         <span className="fixed left-4 top-27 sm:left-8.5 sm:top-29.5 lg:left-15 lg:top-37 -rotate-90 origin-left text-sm text-foreground italic pointer-events-none">
@@ -37,4 +37,3 @@ function ThemeToggle() {
 }
 
 export default ThemeToggle;
-/*<span className="fixed top-20 left-10 sm:top-5 sm:left-12 lg:top-14 lg:left-20 text-xs text-muted-foreground/50 -rotate-90 origin-left pointer-events-none">*/

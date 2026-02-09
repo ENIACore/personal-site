@@ -14,7 +14,7 @@ export const workExperiences: WorkExperienceData[] = [
         companyName: "IBM",
         logoClasses: "!h-7 md:!h-10",
         jobTitle: "Software Developer",
-        dateRange: "October 2024 ◦ Present",
+        dateRange: "Oct 2024 - Present",
         technologies: [
             'Java',
             'Spring Boot',
@@ -24,7 +24,7 @@ export const workExperiences: WorkExperienceData[] = [
         ],
         accomplishments: [
             "Built enterprise Java applications for California's Department of Health Care Services",
-            "Modernized 15-year-old aTAR system from Java 6 to Java 24 for treatment access request processing",
+            "Modernized 15-year-old aTAR system from Java 6 to Java 21 for treatment access request processing",
             "Migrated ETL logic from CloverETL to Oracle, optimizing legacy data pipeline infrastructure",
             "Led production deployment with live debugging and issue resolution for successful go-live"
         ]
@@ -34,7 +34,7 @@ export const workExperiences: WorkExperienceData[] = [
         companyName: "UWF Center for Cybersecurity",
         logoClasses: "",
         jobTitle: "Fullstack Developer",
-        dateRange: "March 2023 ◦ October 2024",
+        dateRange: "Mar 2023 - Oct 2024",
         technologies: [
             '.NET Core',
             'Django',
@@ -52,7 +52,7 @@ export const workExperiences: WorkExperienceData[] = [
         companyName: "University of West Florida",
         logoClasses: "",
         jobTitle: "Research Assistant",
-        dateRange: "September 2023 ◦ March 2024",
+        dateRange: "Sep 2023 - Mar 2024",
         technologies: [
             'Flask',
             'C#',
@@ -60,7 +60,7 @@ export const workExperiences: WorkExperienceData[] = [
             'OSINT'
         ],
         accomplishments: [
-            "Authored IEEE COMPSAC 2024 fast abstract on cyber threat data sharing platform architecture",
+            "Authored IEEE COMPSAC 2024 fast abstract on cyber threat data-sharing platform architecture",
             "Built cyber threat collection platform with 6-member team, enhancing threat correlation",
             "Extended MISP with custom Flask API integrating C# application and OSINT feeds"
         ]
@@ -70,7 +70,7 @@ export const workExperiences: WorkExperienceData[] = [
         companyName: "University of West Florida",
         logoClasses: "",
         jobTitle: "Research Assistant",
-        dateRange: "April 2023 ◦ August 2023",
+        dateRange: "Apr 2023 - Aug 2023",
         technologies: [
             'React',
             'GitHub Actions',

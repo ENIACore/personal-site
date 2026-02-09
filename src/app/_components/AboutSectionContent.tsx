@@ -10,8 +10,8 @@ const AboutSectionContent: React.FC = () => {
             <SectionTitle classes="" title='About Me'/>
             <div className="flex flex-col">
                 <div className="flex flex-col w-full">
-                    <Paragraph classes="mb-4" text="Outside of being a software engineer I'm also an Engineer Officer (12A) in the Army National Guard and an avid lifter. I believe my military experience allows me to approach problems outside of a purely engineering angle. It's also helped me to appreciate the team aspect of engineering - I am always open to projects with other developers!"/>
-                    <Paragraph classes="mb-4" text="My main hobby, besides staying active, is coding. Recently I am obsessed with creating software to manage my server, but I have a variety of personal projects I have created in my spare time. All of my personal code is on my Github and free for anyone to use. ☺"/>
+                    <Paragraph classes="mb-4" text="Beyond being a software engineer, I'm an Engineer Officer (12A) in the Army National Guard and an avid lifter. My military background has given me a broader perspective on problem solving and deepened my appreciation for the teamwork in engineering. I'm always open to projects with other developers!"/>
+                    <Paragraph classes="mb-4" text="Coding isn't just my job; it's also how I spend most of my free time when I'm not staying active. My recent obsession is creating software to manage my home server, but I also have a variety of other personal projects. All my projects are on my GitHub and open source. ☺"/>
                 </div>
                 <div className="flex flex-row w-full items-center justify-around my-4">
                     <Image
