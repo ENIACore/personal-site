@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
                     <Tooltip text='Projects'/>
                 </li>
                 <li className="group relative">
-                    <Link href="#" className="cursor-pointer">
+                    <Link href="/blogs" className="cursor-pointer">
                         <FilePen className="text-foreground hover:text-foreground-muted transition-colors"/>
                     </Link>
                     <Tooltip text='Blogs'/>

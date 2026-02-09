@@ -46,7 +46,6 @@ const ProjectPreviewThumbnail: React.FC<{ thumbnail: string; projectName: string
                     height={200}
                     width={200}
                     className="w-full h-full object-cover sm:rounded-l-lg sm:transition-transform sm:duration-300 sm:group-hover:scale-105"
-                    unoptimized
                 />
             </div>
         </div>
