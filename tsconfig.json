@@ -25,6 +25,9 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@payload-config": [
+        "./src/payload.config.ts"
       ]
     },
     "target": "ES2017"
