@@ -12,7 +12,7 @@ const BulletList: React.FC<BulletListProps> = ({items, className = ''}) => {
         <ul className={`${className} list-disc list-inside`}>
             {items.map((text, index) => (
                 <li key={index}>
-                    <Text className='' text={text} size='bs'/>
+                    <Text className='inline!' text={text} size='bs'/>
                 </li>
             ))}
         </ul>
