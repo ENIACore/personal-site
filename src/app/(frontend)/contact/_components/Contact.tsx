@@ -5,19 +5,13 @@ import TwitterIcon from '@/src/components/icons/TwitterIcon';
 import Social from './Social';
 import Text from '@/src/components/ui/Text';
 
-import { getPayload } from 'payload'
-import config from '@payload-config'
+interface ContactProps {
+    email: string;
+    linkedin: string;
+    twitter: string;
+}
 
-async function Contact(): Promise<React.ReactNode> {
-
-    const payload = await getPayload({ config })
-    const socials = await payload.findGlobal({
-        slug: 'social-links',
-    })
-
-    const email = socials.email ? socials.email : 'example@mail.com';
-    const linkedin = socials.linkedin ? socials.linkedin : 'linkedin-username';
-    const twitter = socials.twitter ? socials.twitter : 'twitter-username';
+const Contact = ({email, linkedin, twitter}: ContactProps) => {
 
     return (
         <>
