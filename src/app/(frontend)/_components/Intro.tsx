@@ -9,15 +9,14 @@ import GithubIcon from '@/src/components/icons/GithubIcon';
 import TwitterIcon from '@/src/components/icons/TwitterIcon';
 import EmailIcon from '@/src/components/icons/EmailIcon';
 
-import { getPayload } from 'payload'
-import config from '@payload-config'
+interface IntroProps {
+    linkedin: string;
+    github: string;
+    twitter: string;
+    email: string;
+}
 
-async function Intro(): Promise<React.ReactNode> {
-
-    const payload = await getPayload({ config })
-    const socials = await payload.findGlobal({
-        slug: 'social-links',
-    })
+const Intro = ({linkedin, github, twitter, email}: IntroProps) => {
 
     return (
         <>
@@ -43,28 +42,28 @@ async function Intro(): Promise<React.ReactNode> {
             <div className="flex flex-row justify-center">
                 <Link 
                     aria-label='linkedin link' 
-                    href={socials.linkedin && socials.linkedin !== '#' ? `https://www.linkedin.com/in/${socials.linkedin}/` : '#'} 
+                    href={linkedin} 
                     className="m-2 cursor-pointer"
                 >
                     <LinkedinIcon/>
                 </Link>
                 <Link 
                     aria-label='github link' 
-                    href={socials.github && socials.github !== '#' ? `https://github.com/${socials.github}` : '#'} 
+                    href={github} 
                     className="m-2 cursor-pointer"
                 >
                     <GithubIcon/>
                 </Link>
                 <Link 
                     aria-label='twitter link' 
-                    href={socials.twitter && socials.twitter !== '#' ? `https://x.com/${socials.twitter}` : '#'} 
+                    href={twitter} 
                     className="m-2 cursor-pointer"
                 >
                     <TwitterIcon/>
                 </Link>
                 <Link 
                     aria-label='email link' 
-                    href={socials.email && socials.email !== '#' ? `mailto:${socials.email}` : '#'} 
+                    href={email} 
                     className="m-2 cursor-pointer"
                 >
                     <EmailIcon/>

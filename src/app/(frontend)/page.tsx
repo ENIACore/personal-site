@@ -4,12 +4,25 @@ import Section from '@/src/components/layout/Section';
 import Intro from './_components/Intro';
 import About from './_components/About';
 
-// Tailwind CSS class order: Layout -> Flex/Grid -> Spacing -> Sizing -> Typography -> Visual -> Effects -> Misc -> State -> Responsive
-const Page: React.FC = () => {
+import { getPayload } from 'payload'
+import config from '@payload-config'
+
+async function Page(): Promise<React.ReactNode> {
+
+    const payload = await getPayload({ config })
+    const socials = await payload.findGlobal({
+        slug: 'social-links',
+    })
+
+    const linkedin = (socials.linkedin && socials.linkedin !== '#' ? `https://www.linkedin.com/in/${socials.linkedin}/` : '#')
+    const github = (socials.github && socials.github !== '#' ? `https://github.com/${socials.github}` : '#')
+    const twitter = (socials.twitter && socials.twitter !== '#' ? `https://x.com/${socials.twitter}` : '#')
+    const email = (socials.email && socials.email !== '#' ? `mailto:${socials.email}` : '#')
+
     return (
         <SectionWrapper>
             <Section>
-                <Intro/>
+                <Intro linkedin={linkedin} github={github} twitter={twitter} email={email}/>
             </Section>
             <Section title='About Me'>
                 <About/>
