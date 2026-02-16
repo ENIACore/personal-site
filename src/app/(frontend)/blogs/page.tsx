@@ -1,3 +1,6 @@
+// Requires dynamic rendering due to reliance on payload data
+export const dynamic = 'force-dynamic'
+
 import React from 'react';
 import SectionWrapper from '@/src/components/layout/SectionWrapper';
 import Section from '@/src/components/layout/Section';
